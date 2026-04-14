@@ -11,9 +11,12 @@ public class ModEntry : Mod
         var harmony = new Harmony(ModManifest.UniqueID);
         harmony.PatchAll();
     }
+}
 
+[HarmonyPatch(typeof(AdvancedGameOptions), nameof(AdvancedGameOptions.PopulateOptions))]
+public class AdvancedGameOptionsPatches
+{
     [HarmonyPostfix]
-    [HarmonyPatch(typeof(AdvancedGameOptions), nameof(AdvancedGameOptions.PopulateOptions))]
     public static void PopulateOptions_Postfix(AdvancedGameOptions __instance)
     {
         foreach (var option in __instance.options)
@@ -22,7 +25,7 @@ public class ModEntry : Mod
                 textEntry.textBox.numbersOnly &&
                 textEntry.textBox.textLimit == 9)
             {
-                textEntry.textBox.textLimit = 20;
+                textEntry.textBox.textLimit = 15;
                 break;
             }
         }
