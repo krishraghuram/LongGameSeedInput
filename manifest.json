@@ -1,0 +1,9 @@
+{
+  "Name": "Long Game Seed Input",
+  "Author": "krish.raghuram@gmail.com",
+  "Version": "1.0.0",
+  "Description": "Allow input of long game seeds in the Advanced Game Options Menu.",
+  "UniqueID": "Raghu.LongGameSeedInput",
+  "EntryDll": "LongGameSeedInput.dll",
+  "MinimumApiVersion": "3.0.0"
+}
