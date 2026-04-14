@@ -25,7 +25,7 @@ public class AdvancedGameOptionsPatches
                 textEntry.textBox.numbersOnly &&
                 textEntry.textBox.textLimit == 9)
             {
-                textEntry.textBox.textLimit = 15;
+                textEntry.textBox.textLimit = 20;
                 break;
             }
         }
